@@ -1,6 +1,6 @@
 <template>
   <div class="temperature">
-    <img src="img/thermometer.png" />
+    <img src="../../img/thermometer.png" />
     <div class="temp-real">{{ temp_real }}</div>
     <div class="temp-feel">{{ temp_feel }}</div>
   </div>
@@ -10,8 +10,8 @@
 export default {
   name: "Tempreture",
   props: {
-    temp_real: String,
-    temp_feel: String,
+    temp_real: Number,
+    temp_feel: Number,
   },
 };
 </script>
