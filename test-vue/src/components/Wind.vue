@@ -1,5 +1,7 @@
 <template>
-  <div class="wind"><img src="../../img/wind.png" /> {{wind}} <small>м/с</small></div>
+  <div class="wind">
+    <img src="../../img/wind.png" /> {{ wind }} <small>м/с</small>
+  </div>
 </template>
 
 <script>
@@ -14,7 +16,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .wind {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: #fff;

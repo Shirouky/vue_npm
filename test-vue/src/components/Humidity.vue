@@ -1,5 +1,7 @@
 <template>
-  <div class="humidity"><img src="../../img/humidity.png" /> {{hum}} <small>%</small></div>
+  <div class="humidity">
+    <img src="../../img/humidity.png" /> {{ hum }} <small>%</small>
+  </div>
 </template>
 
 <script>
@@ -18,7 +20,7 @@ export default {
   position: relative;
   margin: 15px;
   text-shadow: 2px 2px 2px #444;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 40px;
   font-weight: 400;
   color: #fff;

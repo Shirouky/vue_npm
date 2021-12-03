@@ -1,13 +1,17 @@
 <template>
-  <div class="informer-container">
-    <div class="flex-break"></div>
-    <Temperature temp_real="3.2" temp_feel="1.2" />
+  <div class="app">
+    <div class="informer-container">
+      <div class="flex-break"></div>
+      <Temperature :temp_real="temp_real" :temp_feel="temp_feel" />
 
-    <Humidity hum="13" />
+      <div class="wrap">
+        <Humidity :hum="hum" />
 
-    <div class="vertical-divider"></div>
+        <div class="vertical-divider"></div>
 
-    <Wind wind="14" />
+        <Wind :wind="wind" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,6 +26,14 @@ export default {
     Temperature,
     Humidity,
     Wind,
+  },
+  data() {
+    return {
+      temp_real: 1,
+      temp_feel: -3.2,
+      hum: 6,
+      wind: 20,
+    };
   },
 };
 </script>
@@ -42,16 +54,34 @@ export default {
   box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
-.flex-break{
+.flex-break {
   flex-basis: 100%;
   height: 0;
 }
 
-.vertical-divider{
+.vertical-divider {
   height: 70px;
   width: 1px;
   background-color: #fff;
   vertical-align: middle;
   display: table-cell;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(244, 123, 186);
+  background: linear-gradient(
+    -25deg,
+    rgba(244, 123, 186, 0.5) 20%,
+    rgba(90, 95, 245, 0.5) 80%
+  );
+}
+
+.wrap{
+  display: flex;
+  justify-content: space-around;
 }
 </style>
